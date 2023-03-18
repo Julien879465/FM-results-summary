@@ -17,12 +17,15 @@
     --Dark-gray-blue: hsl(224, 30%, 27%);
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body {
-    background: var(--Pale-blue);
-    width: 1440px;
+    background: var(--Dark-gray-blue);
     font-size: 18px;
+    min-height: 100vh;
     font-family: 'Hanken Grotesk', sans-serif;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,13 +40,14 @@ h2 {
 
 .card-container {
     display: flex;
+    width: max-content;
     flex-direction: row;
     align-items: center;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .result {
     display: flex;
+    z-index: 50;
     height: 450px;
     width: 350px;
     background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
@@ -53,10 +57,11 @@ h2 {
     justify-content: center;
     color: var(--white);
     border-radius: 1.5rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .result p, .result h3 {
-    color: var(--Light-lavender) ;
+    color: var(--Light-lavender);
 }
 
 .result-score {
@@ -82,8 +87,10 @@ h2 {
     align-self: flex-start;
 }
 .summary {
+    position: relative;
+    left: -20px;
     height: 450px;
-    width: 300px;
+    width: 350px;
     display: flex;
     gap: 20px;
     font-weight: 700;
@@ -93,6 +100,7 @@ h2 {
     background-color: var(--white);
     border-top-right-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .reaction {
@@ -209,4 +217,30 @@ img {
     color: white;
     height: 48px;
     width: 238px;
+}
+
+@media screen and (max-width: 768px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: max-content;
+    }
+    .summary{
+        position: relative;
+        top: -20px;
+        left: 0;
+        z-index: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+    .result{
+        border-bottom-right-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
 }
