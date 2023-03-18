@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    --primary-red: hsl(0, 100%, 67%);
+    --primary-orange: hsl(39, 100%, 56%);
+    --primary-green: hsl(166, 100%, 37%);
+    --primary-blue: hsl(234, 85%, 45%);
+
+    --gradient-slate-blue: hsl(252, 100%, 67%);
+    --gradient-royal-blue: hsl(241, 81%, 54%);
+    --gradient-violet: hsla(256, 72%, 46%, 1);
+    --gradient-persian: hsla(241, 72%, 46%, 0);
+
+    --white: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+    background: var(--Pale-blue);
+    width: 1440px;
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    margin-bottom: 0px;
+    margin-top: 2rem;
+}
+
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.result {
+    display: flex;
+    height: 450px;
+    width: 350px;
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: var(--white);
+    border-radius: 1.5rem;
+}
+
+.result p, .result h3 {
+    color: var(--Light-lavender) ;
+}
+
+.result-score {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.result-score-of {
+    margin: 0px;
+}
+.result-circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 175px;
+    width: 175px;
+    border-radius: 100%;
+    background: linear-gradient(to bottom, var(--gradient-violet), var(--gradient-persian));;
+}
+
+.summary h3{
+    display: flex;
+    align-self: flex-start;
+}
+.summary {
+    height: 450px;
+    width: 300px;
+    display: flex;
+    gap: 20px;
+    font-weight: 700;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.reaction {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    width: 238px;
+    align-items: center;
+    justify-content: row;
+    border-radius: 0.5rem;
+    background-color: hsla(0, 100%, 67%, 0.2);
+}
+.reaction-container{
+    display:flex
+}
+.reaction-title {
+    display: flex;
+    align-self: center;
+    color: hsla(0, 100%, 67%, 0.8);
+    font-weight: 700;
+    font-size: 16px
+}
+
+.memory {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    width: 238px;
+    align-items: center;
+    justify-content: row;
+    border-radius: 0.5rem;
+    background-color: hsla(39, 100%, 56%, 0.2);
+}
+
+.memory-container {
+    display: flex
+}
+
+.memory-title {
+    color: hsla(39, 100%, 56%, 0.8);
+    align-self: center;
+    font-weight: 700;
+    font-size: 16px
+}
+
+.verbal {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    width: 238px;
+    align-items: center;
+    justify-content: row;
+    border-radius: 0.5rem;
+    background-color: hsla(166, 100%, 37%, 0.2);
+}
+.verbal-container {
+    display: flex;
+}
+.verbal-title {
+    color: hsla(166, 100%, 37%, 0.8);
+    align-self: center;
+    font-weight: 700;
+    font-size: 16px
+}
+
+.visual {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    width: 238px;
+    align-items: center;
+    justify-content: row;
+    border-radius: 0.5rem;
+    background-color: hsla(234, 85%, 45%, 0.2);
+}
+
+.visual-container {
+    display: flex;
+}
+.visual-title {
+    color: hsla(234, 85%, 45%, 0.8);
+    align-self: center;
+        font-weight: 700;
+        font-size: 16px
+}
+
+.summary-score {
+    color: hsla(224, 30%, 27%, 1);
+    font-size: 16px
+}
+.summary-score-of {
+    font-weight: 700;
+    margin-right: 0.5rem;
+    color: hsla(224, 30%, 27%, 0.6);
+    font-size: 16px
+}
+
+.summary-scores {
+    display: flex;
+}
+.attribution {
+    position: fixed;
+        bottom: 0;
+}
+
+img {
+    margin: 0.5rem;
+}
+
+.button {
+    background-color: var(--Dark-gray-blue);
+    font-weight: 700;
+    border-radius: 2rem;
+    color: white;
+    height: 48px;
+    width: 238px;
+}
